@@ -1,0 +1,34 @@
+version: '3.1'
+services:
+  db:
+    image: mysql
+    networks:
+      - connection
+    volumes:
+      - ./db/runtime:/var/lib/mysql
+      - ./db/backup/:/docker-entrypoint-initdb.d:ro
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: 1234
+    ports:
+      - "3307:3306"
+
+  www:
+    build:
+      context: ./public
+      dockerfile: Dockerfile
+    networks:
+      - connection
+    volumes:
+      - ./www:/var/www
+      - ./public/vhosts:/etc/apache2/sites-available
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+
+networks:
+  connection:
+    driver: bridge

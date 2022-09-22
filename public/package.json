@@ -1,0 +1,26 @@
+{
+  "name": "PracticeProject",
+  "version": "1.0.0",
+  "dependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "bootstrap": "^4.6.0",
+    "grunt": "^1.4.1",
+    "grunt-babel": "^8.0.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-jshint": "^3.0.0",
+    "grunt-contrib-nodeunit": "^3.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "jquery": "^3.6.0",
+    "parsleyjs": "^2.9.2",
+    "sass": "^1.38.1"
+  }
+}
